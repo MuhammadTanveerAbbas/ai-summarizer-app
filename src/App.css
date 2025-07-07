@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  📌 Note: The background grid and gradient style draws inspiration from https://dub.sh
+  (credit to the original creator).
+*/
+
+/* ----------------------------- */
+/* 🎯 MAIN BACKGROUND CONTAINER */
+/* ----------------------------- */
+
+.main {
+  @apply fixed flex justify-center w-screen min-h-screen px-6 pt-[120px] pb-[160px] pointer-events-none;
+}
+
+.main::before {
+  content: "";
+  @apply absolute w-full h-full top-0 z-20;
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+}
+
+.main::after {
+  content: "";
+  @apply absolute w-full h-full top-0 z-10 opacity-40 invert;
+  background-image: url("/src/assets/grid.svg");
+  background-size: cover;
+}
+
+/* -------------------------- */
+/* 🌈 GRADIENT OVERLAY */
+/* -------------------------- */
+
+.gradient {
+  @apply absolute w-full h-full max-w-[640px] z-30;
+  background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  filter: blur(100px) saturate(150%);
+  opacity: 0.15;
+  top: 80px;
+}
+
+/* 📱 Responsive Padding Fix */
+@media (max-width: 640px) {
+  .main {
+    @apply p-0;
+  }
+}
+
+/* --------------------------------- */
+/* 🎨 TAILWIND COMPONENTS OVERRIDES */
+/* --------------------------------- */
+
+@layer components {
+  .app {
+    @apply relative z-10 flex flex-col items-center justify-center max-w-7xl mx-auto px-6 sm:px-16;
+  }
+
+  .black_btn {
+    @apply rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition hover:bg-white hover:text-black;
+  }
+
+  .head_text {
+    @apply mt-5 text-center text-5xl font-extrabold leading-tight text-black sm:text-6xl;
+  }
+
+  .orange_gradient {
+    @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+  }
+
+  .desc {
+    @apply mt-5 max-w-2xl text-center text-lg text-gray-600 sm:text-xl;
+  }
+
+  .url_input {
+    @apply w-full block py-2.5 pl-10 pr-12 text-sm font-medium shadow-lg font-satoshi border border-gray-200 rounded-md bg-white focus:border-black focus:outline-none focus:ring-0;
+  }
+
+  .submit_btn {
+    @apply absolute inset-y-0 right-0 my-1.5 mr-1.5 flex w-10 items-center justify-center rounded border border-gray-200 text-sm font-medium text-gray-400 hover:text-gray-700 hover:border-gray-700;
+  }
+
+  .link_card {
+    @apply flex flex-row items-center justify-start gap-3 p-3 bg-white border border-gray-200 rounded-lg cursor-pointer;
+  }
+
+  .copy_btn {
+    @apply w-7 h-7 flex items-center justify-center rounded-full bg-white/10 backdrop-blur cursor-pointer;
+    box-shadow: inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2);
+    /* ✅ Fixed Custom Shadow */
+  }
+
+  .blue_gradient {
+    @apply font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+  }
+
+  .summary_box {
+    @apply p-4 rounded-xl border border-gray-200 bg-white/20 backdrop-blur;
+    box-shadow: inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2);
+    /* ✅ Fixed Custom Shadow */
+  }
+}
