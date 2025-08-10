@@ -1,4 +1,4 @@
-<h1 align="center">🤖 AI Summarizer</h1>
+<h1 align="center">AI Summarizer 🤖</h1>
 
 <p align="center">
   <img src="https://i.postimg.cc/MZMxpGdj/AI-Summarizer.png" alt="AI Summarizer" width="500" />
