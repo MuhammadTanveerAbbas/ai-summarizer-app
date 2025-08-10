@@ -20,7 +20,7 @@
 
 ## ✨ Introduction
 
-AI Summarizer lets you convert any article URL into a concise summary in a single click. Featuring a clean UI, local history management, and one-click copy, it leverages OpenAI’s GPT-4 under the hood and RTK Query for efficient data fetching.
+Developed an AI customer support chatbot that automatically responds to support tickets using the latest GPT models. SEO focused to increase organic traffic to the platform. lets you convert any article URL into a concise summary in a single click. Featuring a clean UI, local history management, and one-click copy, it leverages OpenAI’s GPT-4 under the hood and RTK Query for efficient data fetching.
 
 ---
 
