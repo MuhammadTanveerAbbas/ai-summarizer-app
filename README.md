@@ -66,5 +66,5 @@ React • Redux Toolkit • Tailwind CSS • TypeScript • Vite • OpenAI API
 ---
 
 <div align="center">
-Designed and Developed with 🧠 by **Muhammad Tanveer Abbas** 🌟
+Designed and Developed with 🧠 by Muhammad Tanveer Abbas 🌟
 </div>
