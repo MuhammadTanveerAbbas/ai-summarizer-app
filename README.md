@@ -61,7 +61,7 @@ A polished, production ready web app that:
 
 ### 🛠️ Technology Used
 
-React • Redux Toolkit • Tailwind CSS • TypeScript • Vite • OpenAI API
+React Js • Redux Toolkit • Tailwind CSS • TypeScript • Vite • OpenAI API
 
 ---
 
